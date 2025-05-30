@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+import React from "react";
+import "aos/dist/aos.css";
+import BottomNav from "./Pages/Bottomnav";
+
+// Import the page components used in routes
+import About from "./Pages/About";
+import Projects from "./Pages/Projects";
+import HeroSection from "./Pages/Hero";
+import Contact from "./Pages/Contact";
+import Header from "./Pages/Header";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HeroSection />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <BottomNav />
+      </Router>
+
+      <footer className="text-center text-gray-500 text-xs p-4">
+        &copy; {new Date().getFullYear()} Made by DEV AB with ❤️. All rights
+        reserved.
+      </footer>
+    </>
   );
 }
-
-export default App;
