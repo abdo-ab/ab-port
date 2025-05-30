@@ -1,88 +1,6 @@
-// import React from "react";
-import profile from "../images/profile.png";
-import owner from "../images/owner image.png";
-
-// export default function AboutSection() {
-//   return (
-//     <div className="about-section min-h-screen flex flex-col items-center justify-center px-4 py-8 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
-//       <div className="w-full max-w-6xl flex flex-col md:flex-row gap-8">
-//         {/* Group 1: Profile, detail info, and Introduction */}
-//         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start  md:text-left animate-slide-left">
-//           {/* profile with detail info */}
-//           {/* <img
-//             src={profile}
-//             alt="Profile"
-//             className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-500"
-//           />
-//           <h2 className="text-2xl font-bold text-blue-500">ABDO MOHAMMED</h2>
-//           <div className="text-white text-lg font-medium">
-//             Full Stack Web | Mobile App Developer
-//           </div>
-//           <div className="text-blue-700 mb-6 text-lg">
-//             Based in Awash, Ethiopia
-//           </div> */}
-
-//           <div className="w-full">
-//             <h3 className="text-xl font-bold mb-2 text-orange-400">
-//               Introduction
-//             </h3>
-//             <p className="text-gray-50 mb-6">
-//               I'm Abdo mohammed but you can call me Dev-Ab. I'm a passionate web
-//               developer with a focus on creating intuitive and engaging user
-//               experiences. My journey in web development began with a
-//               fascination for how websites work, and I've been hooked ever
-//               since. I love turning complex problems into simple, beautiful, and
-//               functional web applications. I'm also passionate about creating
-//               beautiful, functional, and user-friendly websites. I have
-//               experience working with a variety of technologies, including HTML,
-//               CSS, JavaScript, and React. I'm always looking for new challenges
-//               and opportunities to learn and grow as a developer.
-//             </p>
-//           </div>
-
-//           <div className="w-full">
-//             <h3 className="text-xl font-bold mb-2 text-orange-400">
-//               Education
-//             </h3>
-//             <p className="text-gray-50 mb-6">
-//               My Background I hold a degree in Computer Science from State
-//               University, where I honed my skills in software engineering and
-//               web development. During my studies, I worked on various projects,
-//               including developing a web-based platform for managing student
-//               projects and a mobile app for tracking fitness goals. These
-//               experiences solidified my passion for creating impactful digital
-//               solutions.
-//             </p>
-//           </div>
-//         </div>
-
-//         {/* Group 2: skill and interests */}
-//         <div className="w-full md:w-1/2 flex flex-col animate-slide-right">
-//           <h3 className="text-xl font-bold mb-2 text-orange-400">Skills</h3>
-//           <p className="text-gray-50 mb-6">
-//             My expertise lies on front end development, where I specialize in
-//             HTML, CSS, and JavaScript. I'm proficient in modern frameworks like
-//             React and Vue.js, and I'm always eager to learn new technologies to
-//             stay at the forefront of web development. I also have experience
-//             with back-end development using Node.js and Express, allowing me to
-//             build full-stack applications that are both robust and scalable.
-//           </p>
-//           <h3 className="text-xl font-bold mb-2 text-orange-400">Interests</h3>
-//           <p className="text-gray-50">
-//             Interests Outside of coding, I enjoy exploring new technologies,
-//             contributing to open-source projects, and staying active through
-//             hiking and cycling. I believe in continuous learning and always seek
-//             opportunities to expand my knowledge and skills in the ever-evolving
-//             field of web development.
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// src/App.jsx
 import React from "react";
+// import profile from "../images/profile.png";
+import owner from "../images/owner image.png";
 
 const Card = ({ title, description }) => (
   <div className="flex-1 p-6 border border-gray-300 rounded-lg ">
@@ -93,7 +11,7 @@ const Card = ({ title, description }) => (
 
 function App() {
   return (
-    <div className=" p-6 items-center">
+    <div className="  p-6 items-center" id="about">
       <h1 className="text-xl font-bold p-4 mb-2 text-blue-600 text-center">
         {" "}
         a little bite about me{" "}

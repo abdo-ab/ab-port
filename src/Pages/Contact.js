@@ -16,7 +16,7 @@ const fadeUp = {
 
 const ContactSection = () => {
   return (
-    <section className=" px-6 py-12 text-gray-900">
+    <section className=" px-6 py-12 text-gray-900" id="contact">
       <motion.div
         initial="hidden"
         whileInView="visible"
