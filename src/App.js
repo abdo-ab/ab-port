@@ -13,7 +13,7 @@ export default function App() {
   const renderSection = () => {
     switch (currentSection) {
       case "hero":
-        return <HeroSection />;
+        return <HeroSection setCurrentSection={setCurrentSection} />;
       case "about":
         return <About />;
       case "projects":
