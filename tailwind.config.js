@@ -18,6 +18,9 @@ module.exports = {
         "slide-left": "slideLeft 0.8s ease-out forwards",
         "slide-right": "slideRight 0.8s ease-out forwards",
       },
+      dropShadow: {
+        glow: "0 0 8px #3B82F6", // soft blue glow
+      },
     },
   },
   plugins: [],

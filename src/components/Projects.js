@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import "../style/projects.css"; // Optional custom styles if you have any
 
 const projects = [
   {
@@ -7,28 +8,28 @@ const projects = [
     description:
       "A full-fledged e-commerce platform with user authentication, product catalog, shopping cart, and payment gateway integration. Built with React, Node.js, and MongoDB.",
     image: "https://placehold.co/600x400",
-    link: "https://your-portfolio.com/projects/ecommerce",
+    link: "#",
   },
   {
     title: "Social Media Dashboard",
     description:
       "A dashboard for managing social media accounts, scheduling posts, and analyzing engagement metrics.",
     image: "https://placehold.co/600x400",
-    link: "https://your-portfolio.com/projects/social-media-dashboard",
+    link: "#",
   },
   {
     title: "Personal Finance Tracker",
     description:
       "A web application for tracking personal finances, managing budgets, and visualizing spending patterns.",
     image: "https://placehold.co/600x400",
-    link: "https://your-portfolio.com/projects/finance-tracker",
+    link: "#",
   },
   {
     title: "Recipe Sharing App",
     description:
       "A platform for sharing and discovering recipes, with features like user profiles, recipe search, and commenting.",
     image: "https://placehold.co/600x400",
-    link: "https://your-portfolio.com/projects/recipe-app",
+    link: "#",
   },
 ];
 
@@ -49,11 +50,11 @@ const cardVariants = {
 const FeaturedProjects = () => {
   return (
     <section
-      className="bg-gray-900 text-white py-12 px-6 md:px-16"
+      className="bg-gray-900 text-white py-12 px-6 md:px-16  items-center projects"
       id="projects"
     >
       <motion.h2
-        className="text-4xl font-bold mb-4"
+        className="text-4xl font-bold mb-4 text-center"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -63,7 +64,7 @@ const FeaturedProjects = () => {
       </motion.h2>
 
       <motion.p
-        className="text-gray-300 mb-10 max-w-2xl"
+        className="text-gray-300 mb-10  intro text-16px lg:text-2xl text-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -91,7 +92,7 @@ const FeaturedProjects = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded font-medium transition duration-300"
+                className="inline-block bg-blue-600 hover:bg-orange-700 active:bg-orange-800 text-white px-4 py-2 rounded font-medium transition duration-300"
               >
                 View Project
               </a>
