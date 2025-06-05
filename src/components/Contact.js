@@ -85,7 +85,7 @@ const Contact = () => {
             </li>
             <li>
               <a
-                href="https://linkedin.com/in/yourlinkedin"
+                href="https://www.linkedin.com/in/abdo-mohammed-7197b434b?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-white hover:text-blue-400 transition-all duration-200"
