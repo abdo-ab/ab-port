@@ -7,9 +7,7 @@ import {
   FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
-  FaUser,
 } from "react-icons/fa";
-import "../style/contact.css";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -22,60 +20,40 @@ const fadeUp = {
 
 const Contact = () => {
   return (
-    <div className="contact min-h-screen bg-[#0F172A] text-white px-6 py-12 sm:px-10 md:px-20">
+    <section className="contact w-full min-h-screen bg-[#0F172A] text-white px-6 py-20 sm:px-10 md:px-20">
+      {/* Header */}
       <motion.h2
-        className="text-3xl font-bold mb-10 text-center"
+        className="text-[clamp(2rem,5vw,3rem)] font-bold mb-10 text-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeUp}
       >
-        Ways to reach me out
+        Ways to Reach Me
       </motion.h2>
 
-      <div className="flex flex-col md:flex-row gap-10 justify-center">
-        {/* Business Card */}
-        <motion.div
-          className="w-full md:w-1/2 bg-[#1E293B] p-6 rounded-lg shadow-lg border border-gray-700 hover:scale-105 transition-transform duration-300"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp}
-        >
-          <h3 className="text-2xl font-semibold mb-4 text-orange-400 flex items-center gap-2">
-            Contact Details
-          </h3>
-          <div className="space-y-4 text-lg">
-            <p className="flex items-center gap-2">
-              <FaUser className="text-blue-400" /> Abdo Mohammed
-            </p>
-            <p className="flex items-center gap-2">
-              <FaEnvelope className="text-blue-400" /> Qeysabaxa11@gmail.com
-            </p>
-            <p className="flex items-center gap-2">
-              <FaPhone className="text-blue-400" /> +251 937 848 785
-            </p>
-            <p className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-blue-400" /> Awash, Ethiopia
-            </p>
-          </div>
-        </motion.div>
-
+      {/* Contact Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center">
         {/* Social Media Card */}
         <motion.div
-          className="w-full md:w-1/2 bg-[#1E293B] p-6 rounded-lg shadow-lg border border-gray-700 hover:scale-105 transition-transform duration-300"
+          className="bg-[#1E293B] p-8 rounded-2xl shadow-lg border border-gray-700 hover:scale-105 transition-transform duration-300 relative"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeUp}
         >
-          <h3 className="text-2xl font-semibold mb-4 text-orange-400 flex items-center gap-2">
+          {/* Floating ✦ badge */}
+          <span className="absolute top-4 right-4 bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md text-lg animate-bounce">
+            ✦
+          </span>
+
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-6 text-blue-400 flex items-center gap-2">
             Social Media
           </h3>
           <ul className="space-y-5 text-lg">
             <li>
               <a
-                href="https://t.me/Qabuna_matata"
+                href="https://t.me/Dev_abdo_ab"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-white hover:text-blue-400 transition-all duration-200"
@@ -85,7 +63,7 @@ const Contact = () => {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/abdo-mohammed-7197b434b?"
+                href="https://www.linkedin.com/in/abdo-mohammed-3853aa397/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-white hover:text-blue-400 transition-all duration-200"
@@ -105,8 +83,36 @@ const Contact = () => {
             </li>
           </ul>
         </motion.div>
+
+        {/* Contact Info Card */}
+        <motion.div
+          className="bg-[#1E293B] p-8 rounded-2xl shadow-lg border border-gray-700 hover:scale-105 transition-transform duration-300 relative"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <span className="absolute top-4 right-4 bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md text-lg animate-bounce">
+            ✦
+          </span>
+
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-6 text-blue-400 flex items-center gap-2">
+            Contact Info
+          </h3>
+          <ul className="space-y-5 text-lg">
+            <li className="flex items-center gap-3">
+              <FaEnvelope className="text-red-500" /> Qeysabaxa11@gmail.com
+            </li>
+            <li className="flex items-center gap-3">
+              <FaPhone className="text-green-400" /> +251 937 848 785
+            </li>
+            <li className="flex items-center gap-3">
+              <FaMapMarkerAlt className="text-orange-400" /> Internet
+            </li>
+          </ul>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
