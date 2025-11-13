@@ -11,9 +11,9 @@ import {
 const BottomNav = ({ scrollToSection }) => {
   const navItems = [
     { name: "Home", icon: FaHome, key: "hero" },
+    { name: "Projects", icon: FaProjectDiagram, key: "projects" },
     { name: "About", icon: FaUser, key: "about" },
     { name: "Skills", icon: FaCode, key: "skills" },
-    { name: "Projects", icon: FaProjectDiagram, key: "projects" },
     { name: "Contact", icon: FaEnvelope, key: "contact" },
   ];
 
