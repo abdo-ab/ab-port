@@ -1,120 +1,99 @@
-import React from "react";
-import { motion } from "framer-motion";
-import "../style/projects.css"; // Optional custom styles if you have any
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import Ablex from  "../images/Ablex.webp";
+import mefeydalAgency from '../images/mefeydal-Agency.webp';
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description:
-      "A full-fledged e-commerce platform with user authentication, product catalog, shopping cart, and payment gateway integration. Built with React, Node.js, and MongoDB.",
-    image: "https://placehold.co/600x400",
-    link: "#",
+    title: "Mefeydal Agency",
+    description: "Mefydal is an Agency which provides translation service for varies industries",
+    image: mefeydalAgency,
+    tech: ["React", "TailwindCSS", "Typscript"],
+    github: "https://github.com/abdo-ab/mefeydal-agency",
+    live: "https://mefeydal-agency.vercel.app/",
   },
   {
-    title: "Social Media Dashboard",
-    description:
-      "A dashboard for managing social media accounts, scheduling posts, and analyzing engagement metrics.",
-    image: "https://placehold.co/600x400",
-    link: "#",
-  },
-  {
-    title: "Personal Finance Tracker",
-    description:
-      "A web application for tracking personal finances, managing budgets, and visualizing spending patterns.",
-    image: "https://placehold.co/600x400",
-    link: "#",
-  },
-  {
-    title: "Recipe Sharing App",
-    description:
-      "A platform for sharing and discovering recipes, with features like user profiles, recipe search, and commenting.",
-    image: "https://placehold.co/600x400",
-    link: "#",
+    title: "Ablex",
+    description: "Ablex is Fullstack E-learning  web App which  build for students to  explore courses , Articles and other resources and  in the backdoor Lecturers post the  courses and write there thoughts",
+    image: Ablex,
+    tech: ["Vue.js", "Laravel", "MySQL", "inertia"],
+    github: "https://github.com/abdo-ab/Learnx",
+    live: "#",
   },
 ];
 
-// animation for each card
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.2,
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  }),
-};
-
-const FeaturedProjects = () => {
+const Projects = () => {
   return (
+    <>
     <section
-      className="bg-gray-900 text-white py-12 px-6 md:px-16  items-center projects"
       id="projects"
+      className="w-full bg-[#0F172A] text-gray-300 py-20 px-6 md:px-12"
     >
-      <motion.h2
-        className="text-4xl font-bold mb-4 text-center"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        Featured Projects
-      </motion.h2>
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-[clamp(2rem,5vw,3rem)] font-bold text-white text-center mb-12">
+          My Projects
+        </h2>
 
-      <motion.p
-        className="text-gray-300 mb-10  intro text-16px lg:text-2xl text-center"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.3, duration: 0.6 }}
-      >
-        A selection of my most impactful and innovative projects, showcasing my
-        skills and experience in web development.
-      </motion.p>
-
-      <div className="space-y-12">
-        {projects.map((project, idx) => (
-          <motion.div
-            key={idx}
-            className="flex flex-col md:flex-row md:items-center justify-between gap-6"
-            custom={idx}
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <div className="md:w-2/3">
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-400 mb-4">{project.description}</p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-blue-600 hover:bg-orange-700 active:bg-orange-800 text-white px-4 py-2 rounded font-medium transition duration-300"
-              >
-                View Project
-              </a>
-            </div>
-            <motion.div
-              className="md:w-1/3"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              viewport={{ once: true }}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-[#1e293b] rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_25px_rgba(37,99,235,0.6)] transition-shadow duration-500"
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="rounded-lg w-full shadow-lg"
-              />
-            </motion.div>
-          </motion.div>
-        ))}
+              <div className="relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              <div className="p-6 space-y-4">
+                <h3 className="text-[clamp(1.25rem,2.5vw,1.5rem)] font-semibold text-white">
+                  {project.title}
+                </h3>
+                <p className="text-gray-400 text-[clamp(0.875rem,2vw,1rem)] leading-relaxed">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((t, i) => (
+                    <span
+                      key={i}
+                      className="bg-blue-500 text-white px-2 py-1 rounded-full text-[clamp(0.75rem,1.8vw,0.875rem)]"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex gap-4 pt-4">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-gray-300 hover:text-white transition-colors"
+                  >
+                    <FaGithub /> Code
+                  </a>
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-gray-300 hover:text-blue-500 transition-colors"
+                  >
+                    <FaExternalLinkAlt /> Live
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
+    
+     </>
+    
   );
 };
 
-export default FeaturedProjects;
+export default Projects;

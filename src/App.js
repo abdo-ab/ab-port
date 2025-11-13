@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "./components/Header";
 import HeroSection from "./components/Hero";
 import About from "./components/About";
@@ -8,33 +8,42 @@ import Contact from "./components/Contact";
 import Skills from "./components/Skills";
 
 export default function App() {
-  const [currentSection, setCurrentSection] = useState("hero");
-
-  const renderSection = () => {
-    switch (currentSection) {
-      case "hero":
-        return <HeroSection setCurrentSection={setCurrentSection} />;
-      case "about":
-        return <About />;
-      case "projects":
-        return <Projects />;
-      case "contact":
-        return <Contact />;
-      case "skills":
-        return <Skills />;
-      default:
-        return <HeroSection />;
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
     <>
-      <Header setCurrentSection={setCurrentSection} />
-      <div className="min-h-screen pt-16">{renderSection()}</div>
-      <BottomNav setCurrentSection={setCurrentSection} />
+      <Header scrollToSection={scrollToSection} />
+      <main className="pt-16 overflow-x-hidden scroll-smooth">
+        <section id="hero">
+          <HeroSection />
+        </section>
+
+        <section id="about">
+          <About />
+        </section>
+
+        <section id="skills">
+          <Skills />
+        </section>
+
+        <section id="projects">
+          <Projects />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
+
+      <BottomNav scrollToSection={scrollToSection} />
+
       <footer className="text-center text-gray-500 text-xs p-4">
-        &copy; {new Date().getFullYear()} Made by DEV AB with ❤️. All rights
-        reserved.
+        &copy; {new Date().getFullYear()} Made by DEV AB with ❤️. All rights reserved.
       </footer>
     </>
   );
