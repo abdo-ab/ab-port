@@ -43,7 +43,7 @@ export default function App() {
       <BottomNav scrollToSection={scrollToSection} />
 
       <footer className="text-center text-gray-500 text-xs p-4">
-        &copy; {new Date().getFullYear()} Made by DEV AB with ❤️. All rights reserved.
+        &copy; {new Date().getFullYear()} Made by DEV AB 
       </footer>
     </>
   );
