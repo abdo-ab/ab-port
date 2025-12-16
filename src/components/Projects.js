@@ -1,5 +1,5 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import Ablex from  "../images/Ablex.webp";
+import Ablex from  "../images/Ablex_Dashboard.png";
 import mefeydalAgency from '../images/mefeydal-Agency.webp';
 
 const projects = [
@@ -15,9 +15,9 @@ const projects = [
     title: "Ablex",
     description: "Ablex is Fullstack E-learning  web App which  build for students to  explore courses , Articles and other resources and  in the backdoor Lecturers post the  courses and write there thoughts",
     image: Ablex,
-    tech: ["Vue.js", "Laravel", "MySQL", "inertia"],
-    github: "https://github.com/abdo-ab/Learnx",
-    live: "#",
+    tech: ["React.js", "Laravel", "MySQL", "inertia"],
+    github: "https://github.com/abdo-ab/ab-port",
+    live: "/",
   },
 ];
 
