@@ -15,9 +15,7 @@ const About = () => {
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
           />
           <span className="absolute inset-0 rounded-2xl border-4 border-blue-500 opacity-50 animate-pulse"></span>
-          <span className="absolute top-2 right-2 bg-blue-500 text-white font-bold px-2 py-1 rounded-full animate-bounce">
-            ✦
-          </span>
+
         </div>
 
         {/* Right: side */}
@@ -29,7 +27,7 @@ const About = () => {
           <p className="text-gray-400 leading-relaxed text-[clamp(1rem,2vw,1.25rem)]">
             I’m <span className="font-semibold text-white">ABDO</span>, a passionate Full Stack Developer with experience in building modern, responsive web applications using technologies like{" "}
             <span className="text-blue-400 font-medium">
-              JavaScript, PHP, Laravel, Vue.js, and TailwindCSS
+              JavaScript, PHP, Laravel, Vue.js, React.js and TailwindCSS
             </span>
             . I love transforming ideas into clean, efficient, and scalable solutions.
           </p>
