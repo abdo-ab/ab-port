@@ -90,12 +90,6 @@ const Hero = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          <div
-            className="absolute top-6 right-6 bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md text-lg"
-            aria-hidden="true"
-          >
-            ✦
-          </div>
         </div>
       </div>
     </section>
