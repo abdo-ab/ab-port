@@ -23,16 +23,16 @@ export default function App() {
           <HeroSection />
         </section>
 
+         <section id="projects">
+          <Projects />
+        </section>
+
         <section id="about">
           <About />
         </section>
 
         <section id="skills">
           <Skills />
-        </section>
-
-        <section id="projects">
-          <Projects />
         </section>
 
         <section id="contact">
